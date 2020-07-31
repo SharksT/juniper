@@ -160,7 +160,7 @@ where
         _ => {
             let body = String::from_request(&req, &mut payload.into_inner()).await?;
             serde_json::from_str::<GraphQLBatchRequest<S>>(&body).map_err(ErrorBadRequest)
-        }
+        },
         Some("application/graphql") => {
             let body = String::from_request(&req, &mut payload.into_inner()).await?;
             Ok(GraphQLBatchRequest::Single(GraphQLRequest::new(
