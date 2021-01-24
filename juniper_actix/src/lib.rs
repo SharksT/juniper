@@ -45,6 +45,7 @@ use actix_web::{
     http::{header::CONTENT_TYPE, Method},
     web, Error, FromRequest, HttpRequest, HttpResponse,
 };
+
 use juniper::{
     http::{
         graphiql::graphiql_source, playground::playground_source, GraphQLBatchRequest,
