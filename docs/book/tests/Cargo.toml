@@ -1,26 +1,26 @@
 [package]
-name = "juniper_book_tests"
-version = "0.1.0"
-edition = "2018"
 authors = ["Magnus Hallin <mhallin@fastmail.com>"]
 build = "build.rs"
+edition = "2018"
+name = "juniper_book_tests"
+version = "0.1.0"
 
 [dependencies]
-juniper = { path = "../../../juniper" }
-juniper_iron = { path = "../../../juniper_iron" }
-juniper_subscriptions = { path = "../../../juniper_subscriptions" }
+juniper = {path = "../../../juniper"}
+juniper_iron = {path = "../../../juniper_iron"}
+juniper_subscriptions = {path = "../../../juniper_subscriptions"}
 
 derive_more = "0.99"
 futures = "0.3"
 iron = "0.5"
 mount = "0.4"
-skeptic = "0.13"
 serde_json = "1.0"
-tokio = { version = "0.2", features = ["blocking", "macros", "rt-core", "rt-util", "stream"] }
+skeptic = "0.13"
+tokio = {version = "1.1", features = ["blocking", "macros", "rt-core", "rt-util", "stream"]}
 uuid = "0.8"
 
 [build-dependencies]
 skeptic = "0.13"
 
 [patch.crates-io]
-juniper_codegen = { path = "../../../juniper_codegen" }
+juniper_codegen = {path = "../../../juniper_codegen"}
