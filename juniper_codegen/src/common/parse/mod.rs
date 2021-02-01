@@ -196,7 +196,7 @@ impl TypeExt for syn::Type {
             | T::Macro(_)
             | T::Never(_)
             | T::Verbatim(_)
-            | T::__TestExhaustive => {}
+            | T::__TestExhaustive(_) => {}
         }
     }
 }
